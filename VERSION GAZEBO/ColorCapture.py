@@ -42,12 +42,12 @@ class DetectColors():
         self.lightness_green_l = 50 #100
         self.lightness_green_h = 255
 
-        self.min_azul = 7000
-        self.min_rojo = 20000
-        self.min_verde = 25000
+        self.min_azul = 18000
+        self.min_rojo = 7000
+        self.min_verde = 500
 
         #Nos subscribimos a un topic 
-        self.sub_image = rospy.Subscriber('/detect_image_input', Image, self.GetImage, queue_size = 1)
+        self.sub_image = rospy.Subscriber('/camera/rgb/image_raw', Image, self.GetImage, queue_size = 1)
         rospy.sleep(1)
 
 
@@ -100,7 +100,7 @@ class DetectColors():
         cv2.imshow('ROJO',res) 
         col = cv2.cvtColor(res, cv2.COLOR_HSV2BGR)
         gray = cv2.cvtColor(col, cv2.COLOR_BGR2GRAY)
-        im, contours, hi = cv2.findContours(gray, 1,2) #cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+        contours, hi = cv2.findContours(gray, 1,2) #cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
         min_area = 20000
         detectado = False
         if len(contours) != 0:
@@ -145,7 +145,7 @@ class DetectColors():
         cv2.imshow('Azul',res)
         col = cv2.cvtColor(res, cv2.COLOR_HSV2BGR)
         gray = cv2.cvtColor(col, cv2.COLOR_BGR2GRAY)
-        im, contours, hi = cv2.findContours(gray, 1,2) #cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+        contours, hi = cv2.findContours(gray, 1,2) #cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
         min_area = 7000
         detectado = False
         if len(contours) != 0:
@@ -189,7 +189,7 @@ class DetectColors():
         cv2.imshow('Verde',res) 
         col = cv2.cvtColor(res, cv2.COLOR_HSV2BGR)
         gray = cv2.cvtColor(col, cv2.COLOR_BGR2GRAY)
-        im, contours, hi = cv2.findContours(gray, 1,2) #cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
+        contours, hi = cv2.findContours(gray, 1,2) #cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
         min_area = 1000
         detectado = False
         if len(contours) != 0:
@@ -202,6 +202,7 @@ class DetectColors():
         if detectado:
             pub_verde.publish(1)
         else:
+            CameraCapture
             pub_verde.publish(0)
             
         return mask   
