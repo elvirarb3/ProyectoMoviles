@@ -1,6 +1,10 @@
 PARA LA EJECUCION EN EL TURTLEBOT Y MAQUINA DE ESTADOS
 --------------------------------------------------
+ANTES DE EMPEZAR EN UNA TERMINAL SE EJECUTA EL SIGUIENTE ARCHIVO Y LUEGO SE CIERRA.
+Este archivo define las variables de entorno, donde el numero final es el referente a la ip del turtlebot
 
+	bash setvars.sh 1
+	
 Estos tres comandos se realizan conectandonos con el robot usando la terminal
 
 TERMINAL 1:
