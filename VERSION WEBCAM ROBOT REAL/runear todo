@@ -1,0 +1,39 @@
+CON EL TURTLEBOT 5 Y USANDO LA WEBCAM DEL ORDENADOR EN VEZ DE EL ROBOT
+ ssh tb2@192.168.1.9
+	roslaunch astra_launch astra.launch
+
+	roslaunch turtlebot_bringup minimal.launch
+	
+	export TURTLEBOT_3D_SENSOR=astra
+	roslaunch turtlebot_navigation amcl_demo.launch map_file:=/home/tb2/mapa_eps.yaml
+	  
+	roslaunch turtlebot_bringup hokuyo_ust10lx.launch
+
+Localizamos con rviz
+	rosrun rviz rviz
+teleoperamos para que acabe de localizarse 
+
+	roslaunch turtlebot_teleop keyboard_teleop.launch 
+	
+guardamos las posiciones mirando el topic de rostopic echo /move_base/goal 
+
+modificamos Gomaps.py ese --> bash setvars.sh 5
+
+runeamos el setbash ese
+
+En el ordenador 
+TERMINAL 3:
+	python3 GoToMapPoint.py
+
+TERMINAL 4:
+	python3 Robot_real.py
+	
+TERMINAL 5: PARA LA WEB CAM
+ 	python SendImageToTopic.py
+ 	
+TERMINAL 6:
+	python3 ColorCapture.py
+
+
+	
+

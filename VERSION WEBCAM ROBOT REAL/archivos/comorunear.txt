@@ -1,0 +1,19 @@
+TERMINAL 1:
+	export TURTLEBOT3_MODEL=burger
+	roslaunch turtlebot3_gazebo turtlebot3_house.launch
+
+TERMINAL 2:
+	export TURTLEBOT3_MODEL=burger
+	roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/mapa2.yaml
+	
+TERMINAL 3:
+	python3 GoToMapPoint.py
+
+TERMINAL 4:
+	python3 robot_maquina_estados_gazebo_vagabundo_go_to_point_x_y.py 
+
+Cuando el robot quiera recibir una señan en la 5 terminal escribir
+	
+	rostopic pub /detect/azul std_msgs/Int16 "data: 1" 
+	rostopic pub /detect/azul std_msgs/Int16 "data: 0" 
+ 
