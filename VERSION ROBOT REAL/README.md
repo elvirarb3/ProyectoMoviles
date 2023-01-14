@@ -1,10 +1,15 @@
-PARA LA EJECUCION EN EL TURTLEBOT Y MAQUINA DE ESTADOS
---------------------------------------------------
-ANTES DE EMPEZAR EN UNA TERMINAL SE EJECUTA EL SIGUIENTE ARCHIVO Y LUEGO SE CIERRA.
+ANTES DE EMPEZAR LA EJECUCION
+----------------------------------------------------------------
 Este archivo define las variables de entorno, donde el numero final es el referente a la ip del turtlebot
 
 	bash setvars.sh 1
 	
+Importante tambien copiar los archivos del mapa dentro del turtlebot, en una terminal vamos hasta la carpeta de los archivos de los mapas y escribimos el siguiente comando
+
+	scp mapa_eps.pgm mapa_eps.yaml turtlebot@192.168.1.5:~
+	
+PARA LA EJECUCION EN EL TURTLEBOT Y MAQUINA DE ESTADOS
+--------------------------------------------------	
 Estos tres comandos se realizan conectandonos con el robot usando la terminal
 
 TERMINAL 1:
