@@ -18,7 +18,7 @@ TERMINAL 3:
 
 TERMINAL 4:
 
-	python3 robot_maquina_estados_gazebo_vagabundo_go_to_point_x_y.py
+	python3 Robot_GAZEBO.py
  
  PARA LA DETECCION DE COLORES 
  --------------------------------
