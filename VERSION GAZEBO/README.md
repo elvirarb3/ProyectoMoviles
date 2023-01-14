@@ -7,6 +7,7 @@ TERMINAL 1:
 	roslaunch turtlebot3_gazebo turtlebot3_house.launch
 
 TERMINAL 2:
+No olvidar pegar los archivos del mapa en la raiz del sistema 
 
 	export TURTLEBOT3_MODEL=burger
 	roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/mapa2.yaml
