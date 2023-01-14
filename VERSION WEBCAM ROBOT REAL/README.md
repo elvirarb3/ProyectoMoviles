@@ -21,7 +21,7 @@ TERMINAL 2:
 
     ssh turtlebot@192.168.1.5
     roslaunch turtlebot_bringup hokuyo_ust10lx.launch
-	
+   
 TERMINAL 3:
 
     ssh turtlebot@192.168.1.5
@@ -31,7 +31,7 @@ TERMINAL 3:
 PARA MOVER EL ROBOT
 --------------------------------
 
-Estos metodos no son compatibles, por lo tanto se usara el comando de la terminal 4 con el fin de teleoperar el robot y localizarlo en rviz y una vez hecho esto la terminal se cerrara y se usaran el comando de la terminal 5 para activar el servicio de move_base.
+Estos metodos no son compatibles, por lo tanto se usara el comando de la terminal 4 con el fin de teleoperar el robot y localizarlo en rviz y una vez hecho esto la terminal se cerrara y se usaran el comando de la terminal 5 para activar el servicio de move_base y el de la terminal 6 para activar la maquina de estados.
 
 TERMINAL 4: 
 
@@ -50,7 +50,7 @@ TERMINAL 6:
  --------------------------------
  
 ---------------------------------------------------------------------------------
-METODO 1: Si se quiere usar la webcam 
+METODO 1: Si se quiere usar la webcam del ordenador 
 
 TERMINAL 5:
 
