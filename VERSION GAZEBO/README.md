@@ -34,7 +34,7 @@ TERMINAL 6:
     python3 SendImageToTopic.py 
   
 ----------------------------------------------------------------------------------
-MÉTODO 2: Si se quiere simular por terminal la deteccion de los colores, se puede publicar directamente en el siguiente topic 
+MÉTODO 2: Si se quiere simular por terminal la deteccion de los colores, se puede publicar directamente en el siguiente topic. Si quiero simular que se ha detectado el color publico un 1, mientras que si quiero simular que se ha dejado de detectar publico un 0. Si después de publicar un 1 no publico un 0 el topic se quedara activado a 1 por lo que se simulara que sigue detectando un color. 
 	
 	rostopic pub /detect/azul std_msgs/Int16 "data: 1" 
 	rostopic pub /detect/azul std_msgs/Int16 "data: 0" 
