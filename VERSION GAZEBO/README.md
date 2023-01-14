@@ -39,9 +39,9 @@ MÉTODO 2: Si se quiere simular por terminal la deteccion de los colores, se pue
 	rostopic pub /detect/azul std_msgs/Int16 "data: 1" 
 	rostopic pub /detect/azul std_msgs/Int16 "data: 0" 
   
-  rostopic pub /detect/rojo std_msgs/Int16 "data: 1" 
+	rostopic pub /detect/rojo std_msgs/Int16 "data: 1" 
 	rostopic pub /detect/rojo std_msgs/Int16 "data: 0"
   
-  rostopic pub /detect/verde std_msgs/Int16 "data: 1" 
+ 	rostopic pub /detect/verde std_msgs/Int16 "data: 1" 
 	rostopic pub /detect/verde std_msgs/Int16 "data: 0" 
  
