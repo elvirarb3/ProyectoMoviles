@@ -1,6 +1,6 @@
-ANTES DE EMPEZAR LA EJECUCION
+ANTES DE EMPEZAR LA EJECUCIÓN
 ----------------------------------------------------------------
-Este archivo define las variables de entorno, donde el numero final es el referente a la ip del turtlebot
+Este archivo define las variables de entorno, donde el número final es el referente a la ip del turtlebot
 
 	bash setvars.sh 1
 	
@@ -8,7 +8,7 @@ Importante tambien copiar los archivos del mapa dentro del turtlebot, en una ter
 
 	scp mapa_eps.pgm mapa_eps.yaml turtlebot@192.168.1.5:~
 	
-PARA LA EJECUCION EN EL TURTLEBOT Y MAQUINA DE ESTADOS
+PARA LA EJECUCIÓN EN EL TURTLEBOT Y MAQUINA DE ESTADOS
 --------------------------------------------------	
 Estos tres comandos se realizan conectandonos con el robot usando la terminal
 
@@ -41,7 +41,9 @@ TERMINAL 4:
 TERMINAL 5:
 
     python3 GoToMapPoint.py
+    
 TERMINAL 6:
+
     python3 robot_maquina_estados_gazebo_vagabundo_go_to_point_x_y.py
     
  PARA LA DETECCION DE COLORES 
